@@ -1,3 +1,4 @@
+
 opcodes = {
 
     "xor": "000",
@@ -71,31 +72,31 @@ while True:
     second = str[1].split(",")
     match str[0]:
         case "xor":
-            res = RType(res, "xor", second[1], second[2], second[0])
+            res = RType(res, "xor", second[0], second[1], second[2])
         case "or":
-            res = RType(res, "or", second[1], second[2], second[0])
+            res = RType(res, "or", second[0], second[1], second[2])
         case "and":
-            res = RType(res, "and", second[1], second[2], second[0])
+            res = RType(res, "and", second[0], second[1], second[2])
         case "add":
-            res = RType(res, "add", second[1], second[2], second[0])
+            res = RType(res, "add", second[0], second[1], second[2])
         case "sub":
-            res = RType(res, "sub", second[1], second[2], second[0])
+            res = RType(res, "sub", second[0], second[1], second[2])
         case "div":
-            res = RType(res, "div", second[1], second[2], second[0])
+            res = RType(res, "div", second[0], second[1], second[2])
         case "mult":
-            res = RType(res, "mult", second[1], second[2], second[0])
+            res = RType(res, "mult", second[0], second[1], second[2])
         case "nand":
-            res = RType(res, "nand", second[1], second[2], second[0])
+            res = RType(res, "nand", second[0], second[1], second[2])
         case "lw":
-            res = IType(res, second[1], second[0], second[2])
+            res = IType(res, second[0], second[1], second[2])
         case "sw":
-            res = IType(res, second[1], second[0], second[2])
+            res = IType(res, second[0], second[1], second[2])
         case "beq":
             res = IType(res, second[0], second[1], second[2])
         case "addi":
-            res = IType(res, second[1], second[0], second[2])
+            res = IType(res, second[0], second[1], second[2])
         case "andi":
-            res = IType(res, second[1], second[0], second[2])
+            res = IType(res, second[0], second[1], second[2])
         case "ori":
             res = IType(res, second[1], second[0], second[2])
         case "jump":
